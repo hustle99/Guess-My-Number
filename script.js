@@ -36,6 +36,11 @@ document.querySelector('.check').addEventListener('click' , function() {
     document.querySelector('.number').textContent = screteNumber;
     
     document.querySelector('.number').style.width = '30rem';
+    
+    if(score > HigScore ) {
+      HigScore = score;
+      document.querySelector('.highscore').textContent = HigScore;
+    }
 } else if(guess > screteNumber ) {
     document.querySelector('.message').textContent = 'Too High !';
      score = score - 1;
